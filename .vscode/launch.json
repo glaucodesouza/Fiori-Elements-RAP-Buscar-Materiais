@@ -1,0 +1,63 @@
+{
+  "configurations": [
+    {
+      "name": "Start buscarmaterial2",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "cwd": "${workspaceFolder}/buscarmaterial2",
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "runtimeArgs": ["fiori", "run"],
+      "args": ["--open", "test/flpSandbox.html#buscarmaterial2-tile"],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "port": 9229,
+      "env": {
+        "DEBUG": "--inspect",
+        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false"
+      }
+    },
+    {
+      "name": "Start buscarmaterial2 Mock",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/buscarmaterial2",
+      "runtimeExecutable": "npx",
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "runtimeArgs": ["fiori", "run"],
+      "args": ["--config", "./ui5-mock.yaml", "--open", "test/flpSandbox.html#buscarmaterial2-tile"],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "port": 9229,
+      "env": {
+        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false"
+      }
+    },
+    {
+      "name": "Start buscarmaterial2 Local",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/buscarmaterial2",
+      "runtimeExecutable": "npx",
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "runtimeArgs": ["fiori", "run"],
+      "args": ["--config", "./ui5-local.yaml", "--open", "test/flpSandbox.html#buscarmaterial2-tile"],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "port": 9229,
+      "env": {
+        "FIORI_TOOLS_URL_PARAMS": "sap-client=200&sap-ui-xx-viewCache=false"
+      }
+    }
+  ],
+  "compounds": []
+}
